@@ -3,6 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/sword-cloud.iml" filepath="$PROJECT_DIR$/.idea/sword-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sword-common/sword-common.iml" filepath="$PROJECT_DIR$/sword-common/sword-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sword-gateway/sword-gateway.iml" filepath="$PROJECT_DIR$/sword-gateway/sword-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sword-oauth/sword-oauth.iml" filepath="$PROJECT_DIR$/sword-oauth/sword-oauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sword-ops/sword-ops.iml" filepath="$PROJECT_DIR$/sword-ops/sword-ops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sword-services/sword-service-blog/sword-service-blog.iml" filepath="$PROJECT_DIR$/sword-services/sword-service-blog/sword-service-blog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sword-services/sword-service-user/sword-service-user.iml" filepath="$PROJECT_DIR$/sword-services/sword-service-user/sword-service-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sword-services/sword-services.iml" filepath="$PROJECT_DIR$/sword-services/sword-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sword-starters/sword-starters.iml" filepath="$PROJECT_DIR$/sword-starters/sword-starters.iml" />
     </modules>
   </component>
 </project>

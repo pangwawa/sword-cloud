@@ -1,8 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sword-service-blog" />
+        <module name="sword-gateway" />
+        <module name="sword-common" />
+        <module name="sword-oauth" />
+        <module name="sword-ops" />
+        <module name="sword-starters" />
+        <module name="sword-service-user" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="sword-cloud" target="1.8" />
+      <module name="sword-common" target="1.8" />
+      <module name="sword-gateway" target="1.8" />
+      <module name="sword-oauth" target="1.8" />
+      <module name="sword-ops" target="1.8" />
+      <module name="sword-service-blog" target="1.8" />
+      <module name="sword-service-user" target="1.8" />
+      <module name="sword-services" target="1.8" />
+      <module name="sword-starters" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sword-common" options="-parameters" />
+      <module name="sword-gateway" options="-parameters" />
+      <module name="sword-oauth" options="-parameters" />
+      <module name="sword-ops" options="-parameters" />
+      <module name="sword-service-blog" options="-parameters" />
+      <module name="sword-service-user" options="-parameters" />
+      <module name="sword-services" options="-parameters" />
+      <module name="sword-starters" options="-parameters" />
+    </option>
   </component>
 </project>
