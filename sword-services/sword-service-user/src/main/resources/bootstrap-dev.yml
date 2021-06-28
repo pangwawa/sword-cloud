@@ -9,3 +9,11 @@ spring:
         file-extension: yml
         server-addr: 121.4.71.199:50020
         group: SWORD_CLOUD
+  datasource:
+    username: root
+    password: EsunWJ3306
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://121.4.71.199:3306/sword_user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+logging:
+  level:
+    fun.codenow.sword.services.user.mapper: debug

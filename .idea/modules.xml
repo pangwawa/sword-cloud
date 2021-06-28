@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/sword-services/sword-service-user/sword-service-user.iml" filepath="$PROJECT_DIR$/sword-services/sword-service-user/sword-service-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/sword-services/sword-services.iml" filepath="$PROJECT_DIR$/sword-services/sword-services.iml" />
       <module fileurl="file://$PROJECT_DIR$/sword-starters/sword-starters.iml" filepath="$PROJECT_DIR$/sword-starters/sword-starters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sword-api/sword-user-api/sword-user-api.iml" filepath="$PROJECT_DIR$/sword-api/sword-user-api/sword-user-api.iml" />
     </modules>
   </component>
 </project>

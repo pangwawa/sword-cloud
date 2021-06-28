@@ -14,5 +14,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>sword-blog-api</module>
+        <module>sword-user-api</module>
     </modules>
 </project>

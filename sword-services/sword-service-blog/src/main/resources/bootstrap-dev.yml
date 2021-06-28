@@ -13,4 +13,7 @@ spring:
     username: root
     password: EsunWJ3306
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://121.4.71.199:3306/esun_houseware?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://121.4.71.199:3306/sword_blog?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+logging:
+  level:
+    fun.codenow.sword.services.user.mapper: debug
