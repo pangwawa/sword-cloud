@@ -40,7 +40,7 @@ public class MybatisGenerator {
         /**
          *
          */
-        final String  projectPath = "D:\\esunproject\\gitlab\\esun-cloud\\esun-services\\esun-service-oppein-statistic";
+        final String  projectPath = "D:\\esunproject\\me\\sword-cloud\\sword-services\\sword-service-blog";
         //D:\esunproject\gitlab\esun-cloud\esun-services\esun-service-filesystem
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("Jack Wu");
@@ -53,17 +53,17 @@ public class MybatisGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/sword_blog?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false");
+        dsc.setUrl("jdbc:mysql://121.4.71.199:3306/sword_blog?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("123456");
+        dsc.setPassword("EsunWJ3306");
         mpg.setDataSource(dsc);
 
         // 包配置
         final PackageConfig pc = new PackageConfig();
         pc.setModuleName(scanner("模块名"));
-        pc.setParent("com.esdisplay.service.oppein.statistic");
+        pc.setParent("fun.codenow.sword.services");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
