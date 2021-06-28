@@ -9,3 +9,11 @@ spring:
         file-extension: yml
         server-addr: 121.4.71.199:50020
         group: SWORD_CLOUD
+    gateway:
+      routes:
+        - id: service_rourter_blog
+          uri: lb://sword-service-blog
+          predicates:
+            - Path= /blog/**
+          filters:
+            - StripPrefix=1
