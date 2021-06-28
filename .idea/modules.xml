@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/sword-api/sword-api.iml" filepath="$PROJECT_DIR$/sword-api/sword-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sword-api/sword-blog-api/sword-blog-api.iml" filepath="$PROJECT_DIR$/sword-api/sword-blog-api/sword-blog-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sword-cloud.iml" filepath="$PROJECT_DIR$/.idea/sword-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/sword-common/sword-common.iml" filepath="$PROJECT_DIR$/sword-common/sword-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/sword-gateway/sword-gateway.iml" filepath="$PROJECT_DIR$/sword-gateway/sword-gateway.iml" />

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: sword-gateway
+  cloud:
+    nacos:
+      config:
+        prefix: sword-gateway
+        namespace: 73ccce46-b3d9-4d3d-8698-1534e6316f1a
+        file-extension: yml
+        server-addr: 121.4.71.199:50020
+        group: SWORD_CLOUD

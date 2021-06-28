@@ -9,12 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sword-services</artifactId>
+    <artifactId>sword-api</artifactId>
+
     <packaging>pom</packaging>
     <modules>
-        <module>sword-service-user</module>
-        <module>sword-service-blog</module>
+        <module>sword-blog-api</module>
     </modules>
-
-
 </project>
