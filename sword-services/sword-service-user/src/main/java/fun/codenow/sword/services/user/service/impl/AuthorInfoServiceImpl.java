@@ -1,6 +1,7 @@
 package fun.codenow.sword.services.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import fun.codenow.sword.common.exceptions.ServiceException;
 import fun.codenow.sword.services.user.dto.UserInfoDTO;
 import fun.codenow.sword.services.user.entity.AuthorInfo;
 import fun.codenow.sword.services.user.mapper.AuthorInfoMapper;
@@ -26,6 +27,9 @@ public class AuthorInfoServiceImpl extends ServiceImpl<AuthorInfoMapper, AuthorI
         QueryWrapper<AuthorInfo> queryWrapper=new QueryWrapper<>();
         queryWrapper.eq("author_id",authorId);
         AuthorInfo authorInfo=authorInfoMapper.selectOne(queryWrapper);
+        if (authorInfo==null){
+            throw new ServiceException();
+        }
         UserInfoDTO userInfoDTO=new UserInfoDTO();
         userInfoDTO.setAuthorId(authorInfo.getAuthorId());
         userInfoDTO.setAuthorName(authorInfo.getAuthorName());

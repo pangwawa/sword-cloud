@@ -70,3 +70,6 @@ seata
 2、微服务间权限： A方案：通过微服务专用方式认证，使用特定标识、token进行快速认证； B方案： 服务全部署在特定网络，只有网关是允许外网访问，其他都只能通过内外进行访问。
 
 0629： oauth gateway 、 seata、日志与链路
+
+
+spring cloud gateway 不是使用 servlet容器，所以 不能通过servlet 的filter拦截权限校验， 需要自定FIlter 拦截 

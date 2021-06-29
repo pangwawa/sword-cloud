@@ -24,7 +24,12 @@ public class UserInfoApi implements IUserInfoApi {
     @Override
     @GetMapping(value = "/userinfo/getuserinfobyid")
     public ResponseData<UserInfoDTO> getUserInfoById(Long authorId) {
-        UserInfoDTO userInfoDTO= authorInfoService.getUserInfoByAuthorId(authorId);
+        UserInfoDTO userInfoDTO= null;
+        try {
+            userInfoDTO = authorInfoService.getUserInfoByAuthorId(authorId);
+        } catch (NullPointerException e) {
+            return ResponseData.failed("该用户不存在");
+        }
         log.info("user service getUserInfoById: result:{}",new Gson().toJson(userInfoDTO));
         return ResponseData.success(userInfoDTO,"获取用户信息成功");
     }
