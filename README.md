@@ -55,3 +55,18 @@ Prometheus + Gafana
 
 ## 
 Sword is a integrate project  for developers to quickly build Spring Cloud Solution
+
+
+
+自定义 @ApiLog 日志
+自定义 @ApiAuth 权限校验
+
+binlog 同步elasticsearch
+
+seata
+
+## 权限方案
+1、用户权限： 网关控制
+2、微服务间权限： A方案：通过微服务专用方式认证，使用特定标识、token进行快速认证； B方案： 服务全部署在特定网络，只有网关是允许外网访问，其他都只能通过内外进行访问。
+
+0629： oauth gateway 、 seata、日志与链路

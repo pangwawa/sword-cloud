@@ -2,19 +2,20 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sword-service-blog" />
         <module name="sword-gateway" />
-        <module name="sword-user-api" />
         <module name="sword-common" />
         <module name="sword-oauth" />
+        <module name="sword-blog-api" />
         <module name="sword-ops" />
         <module name="sword-starters" />
         <module name="sword-service-user" />
-        <module name="sword-blog-api" />
+        <module name="sword-user-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

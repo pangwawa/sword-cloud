@@ -21,6 +21,7 @@ public class BlogInfoApi {
     @GetMapping(value = "/api/bloginfo/list")
     public ResponseData testApi(Long authorId){
         UserInfoDTO userInfoDTO= userInfoApi.getUserInfoById(authorId).getData();
+        /*throw new RuntimeException("异常测试"); */
         return ResponseData.success(userInfoDTO,"根据作者id获取文章列表成功");
     }
 }
