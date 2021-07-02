@@ -1,6 +1,8 @@
 package fun.codenow.sword.gateway.filter;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
+import fun.codenow.sword.common.ResponseData;
 import fun.codenow.sword.common.constant.AuthConstant;
 import fun.codenow.sword.common.model.dto.ApiLogDTO;
 import lombok.AllArgsConstructor;
@@ -9,20 +11,17 @@ import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.cloud.gateway.support.ServerWebExchangeUtils;
 import org.springframework.core.Ordered;
+import org.springframework.core.io.buffer.DataBuffer;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
-import org.springframework.util.MultiValueMap;
 import org.springframework.util.StringUtils;
 import org.springframework.web.server.ServerWebExchange;
-import org.springframework.web.util.UriComponentsBuilder;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.net.URI;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
-import java.util.HashMap;
-import java.util.LinkedHashSet;
-import java.util.Map;
-
 
 /**
  * @Author Jack Wu
@@ -41,8 +40,10 @@ public class AuthFilter implements GlobalFilter, Ordered {
         String token=null;
         String headerToken = exchange.getRequest().getHeaders().getFirst(AuthConstant.AUTH_KEY);
         String paramToken = exchange.getRequest().getQueryParams().getFirst(AuthConstant.AUTH_KEY);
+        ServerHttpResponse resp = exchange.getResponse();
         if (StringUtils.isEmpty(headerToken)&&StringUtils.isEmpty(paramToken)){
             log.error("未携带令牌，非法请求");
+            /*return unAuth(resp, "缺失令牌,鉴权失败");*/
         }
         token=headerToken;
         if (StringUtils.isEmpty(headerToken)){
@@ -58,11 +59,12 @@ public class AuthFilter implements GlobalFilter, Ordered {
         return -100;
     }
 
-    public static String getOriginalRequestUrl(ServerWebExchange exchange) {
-        ServerHttpRequest request = exchange.getRequest();
-        LinkedHashSet<URI> uris = exchange.getRequiredAttribute(ServerWebExchangeUtils.GATEWAY_ORIGINAL_REQUEST_URL_ATTR);
-        URI requestUri = uris.stream().findFirst().orElse(request.getURI());
-        MultiValueMap<String, String> queryParams = request.getQueryParams();
-        return UriComponentsBuilder.fromPath(requestUri.getRawPath()).queryParams(queryParams).build().toUriString();
+    private Mono<Void> unAuth(ServerHttpResponse resp, String msg) {
+        resp.setStatusCode(HttpStatus.UNAUTHORIZED);
+        resp.getHeaders().add("Content-Type", "application/json;charset=UTF-8");
+        String result = "";
+        result = new Gson().toJson(ResponseData.restResult(null,401,msg));
+        DataBuffer buffer = resp.bufferFactory().wrap(result.getBytes(StandardCharsets.UTF_8));
+        return resp.writeWith(Flux.just(buffer));
     }
 }
