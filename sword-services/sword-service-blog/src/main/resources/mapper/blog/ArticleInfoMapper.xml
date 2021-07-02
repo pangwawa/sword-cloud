@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.codenow.sword.services.blog.mapper.ArticleInfoMapper">
+    <select id="getArticleInfoPageByAuthorId" resultType="fun.codenow.sword.services.blog.dto.ArticleInfoDTO">
+        SELECT article_id,abstract_img,title,article_abstract,pv,article_status,author_id,author_name,type,like_num,comments_num,gmt_create
+        FROM article_info
+        WHERE author_id = #{authorId}
+        ORDER BY gmt_create
+    </select>
+</mapper>

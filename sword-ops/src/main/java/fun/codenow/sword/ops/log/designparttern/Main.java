@@ -1,6 +1,7 @@
 package fun.codenow.sword.ops.log.designparttern;
 
-import com.esdisplay.log.designparttern.singleton.SingletonEnum;
+
+import fun.codenow.sword.ops.log.designparttern.singleton.SingletonEnum;
 
 /**
  * @Author Jack Wu
