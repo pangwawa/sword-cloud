@@ -17,3 +17,15 @@ spring:
 logging:
   level:
     fun.codenow.sword.services.blog.mapper: debug
+
+security:
+  oauth2:
+    resource:
+      user-info-uri:
+      prefer-token-info: true
+      token-info-uri: http://localhost:50001/oauth/check_token
+    client:
+      access-token-uri: http://localhost:50001/oauth/token
+      user-authorization-uri: http://localhost:50001/oauth/authorize
+      client-id: clientid
+      client-secret: secret

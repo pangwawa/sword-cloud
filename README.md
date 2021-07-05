@@ -69,6 +69,7 @@ seata
 1、用户权限： 网关控制
     用户获取token，并携带该token进行访问
     网关获取并校验token是否有效
+    对DefaultSecurityFilterChain 进行修改，增删过滤器，或自定义SecurityFilterChain
 2、微服务间权限： A方案：通过微服务专用方式认证，使用特定标识、token进行快速认证； B方案： 服务全部署在特定网络，只有网关是允许外网访问，其他都只能通过内外进行访问。
 
 外部用户通过网关访问，网关鉴权，基于OAuth，通过网关访问微服务，
