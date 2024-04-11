@@ -43,7 +43,7 @@ sword-cloud
 
 - [x] Spring Cloud Sleuth （zipkin）
 
-- [x] Spring Cloud Stream （ RocketMQT ）
+- [x] Spring Cloud Stream （ RocketMQ ）
 
 - [x] Spring Cloud Security
 
