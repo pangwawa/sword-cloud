@@ -7,9 +7,12 @@
         <groupId>fun.codenow</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+    <modules>
+        <module>sword-starter-oss</module>
+    </modules>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>sword-starters</artifactId>
-
+    <packaging>pom</packaging>
 
 </project>
